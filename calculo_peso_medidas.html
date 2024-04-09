@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Peso e Medidas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="calculator">
+    <h2 class="tilte">Cálculo de Peso e Medidas</h2>
+
+    <form id="calculoForm">
+        
+        <label for="massa">Massa (kg):</label>
+        <input type="number" id="massa" name="peso"><br>
+
+        <label for="comprimento">Comprimento (cm):</label>
+        <input type="number" id="comprimento" name="comprimento"><br>
+
+        <label for="temperatura">Temperatura (°C):</label>
+        <input type="number" id="temperatura" name="temperatura"><br>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+</div>
+    <script src="javascript.js"> </script>
+</body>
+</html>

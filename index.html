@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora ABBA</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="calculator">
+
+        <div class="input-container">
+          <input type="text" id="display" readonly>
+          <button id="abrirCalculoPesoMedidas" onclick="abrirCalculoPesoMedidas()">:</button>
+        </div>
+
+        <div class="buttons">
+          <button class="memory" onclick="saveToMemory()">MS</button>
+          <button class="memory" onclick="recallFromMemory()">MR</button>
+          <button class="apagar" onclick="DeleteDisplay()">DEL</button>
+          <button class="apagar" onclick="clearDisplay()">CE</button>
+
+          <button class="number" onclick="appendToDisplay('7')">7</button>
+          <button class="number" onclick="appendToDisplay('8')">8</button>
+          <button class="number" onclick="appendToDisplay('9')">9</button>
+          <button class="Operacao" onclick="calculate('/')">/</button>
+
+          <button class="number" onclick="appendToDisplay('4')">4</button>
+          <button class="number" onclick="appendToDisplay('5')">5</button>
+          <button class="number" onclick="appendToDisplay('6')">6</button>
+          <button class="Operacao" onclick="calculate('*')">*</button>
+
+          <button class="number" onclick="appendToDisplay('1')">1</button>
+          <button class="number" onclick="appendToDisplay('2')">2</button>
+          <button class="number" onclick="appendToDisplay('3')">3</button>
+          <button class="Operacao" onclick="calculate('-')">-</button>
+
+          <button class="number" onclick="appendToDisplay('0')">0</button>
+          <button class="number" onclick="appendToDisplay('00')">00</button>
+          <button class="memory" onclick="calculate('^')">^</button>
+          <button class="Operacao" onclick="calculate('+')">+</button>
+
+          <button class="number" onclick="appendToDisplay('&lpar;')">(</button>
+          <button class="number" onclick="appendToDisplay('&rpar;')">)</button>
+          <button class="number" onclick="appendToDisplay('.')">.</button>
+          <button class="Factorial" onclick="calculateFactorial('!')">n!</button>
+
+          <button class="Trigonometria" onclick="calculateTrigonometria('%')">%</button>
+          <button class="Trigonometria" onclick="calculateTrigonometria('sqrt')">√</button>
+          <button class="Trigonometria" onclick="calculateTrigonometria('log')">log</button>
+          <button id="igual" onclick="calculateResultado()">=</button>
+          
+          <button class="Trigonometria" onclick="calculateTrigonometria('sin')">sin</button>
+          <button class="Trigonometria" onclick="calculateTrigonometria('cos')">cos</button>
+          <button class="Trigonometria" onclick="calculateTrigonometria('tan')">tan</button>
+          <button id="powerButton" onclick="toggleCalculator()">OFF</button>
+
+        </div>
+
+        <div id="history">
+          <button id="historico" onclick="mostrarHistorico()"> Historico </button>
+        </div>
+
+      </div>
+
+      <div id="historicoDiv" class="historico" onclick="mostrarHistorico()">
+        <h3 id="title"> Historico do Cálculo</h3>
+      </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>

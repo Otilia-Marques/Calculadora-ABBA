@@ -1,0 +1,112 @@
+.calculator {
+  width: 300px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: yellowgreen;
+  margin-right: 0px; /* Espaço entre a calculadora e o histórico */
+}
+  
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.historico {
+    width: 30%;
+    margin: 50px auto;
+    margin-left: 20px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: yellowgreen;
+}
+
+#title{
+  margin-top: 0;
+}
+
+.input-container {
+  position: relative;
+}
+
+#abrirCalculoPesoMedidas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px; /* Largura do botão */
+  height: 64px;
+  margin-bottom: 10px;
+  padding: 6px;
+  background-color: rgb(92, 100, 102);
+}
+
+
+#display {
+    width: 232px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgb(129, 222, 245);
+    padding-right: 30px; /* Para deixar espaço para o botão dos três pontinhos */
+}
+  
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+  
+button {
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.number{
+    background-color: white;
+}
+
+.Operacao{
+    background-color: pink;
+}
+
+.Factorial{
+    background-color: pink;
+}
+
+#igual{
+    background-color: rgb(129, 222, 245);
+}
+
+.Trigonometria{
+    background-color: red;
+    color: white;
+}
+
+.apagar{
+    background-color: rgb(161, 33, 40);
+    color: white;
+}
+
+#powerButton{
+    background-color: rgb(129, 222, 245);
+}
+
+.memory{
+    background-color: white;
+    color: black;
+}
+
+#history{
+    padding: 6px;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#historico{
+  background-color: rgb(129, 222, 245);
+}

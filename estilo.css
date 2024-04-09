@@ -1,0 +1,29 @@
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: yellowgreen;
+}
+  
+.title{
+    text-align: center;
+    margin-top: 0;
+}
+
+button {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid hsl(0, 0%, 80%);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: pink;
+}
+
+#comprimento{
+    margin: 10px auto;
+    width: 144px;
+    height: 16px;
+}
