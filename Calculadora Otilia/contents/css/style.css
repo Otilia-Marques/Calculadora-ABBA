@@ -1,0 +1,178 @@
+body {
+    background-color: #b3acac;
+}
+
+.container-fluid {
+    margin-top: 5px;
+}
+
+.col {
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: default;
+}
+
+.col:hover {
+    background-color: #d8d8d8;
+}
+
+.col:active {
+    background-color: #c0c0c0;
+}
+
+.funct-1, .funct-2 {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    font-weight: 500;
+    cursor: default;
+}
+
+.funct-1:hover, .funct-2:hover {
+    background-color: #d8d8d8;
+}
+
+.funct-1:active, .funct-2:active {
+    background-color: #c0c0c0;
+}
+
+.numeros {
+    background-color: white;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.resultado, .resultado2 {
+    text-align: right;
+}
+
+.resultado > h1 {
+    font-size: 30px;
+}
+
+.resultado2 > p {
+    font-size: 10px;
+    margin-bottom: -4px;
+}
+
+.cabecalho > div > h3 {
+    font-weight: 400;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.cabecalho > div > h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px;
+}
+
+#side-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+#side-menu.show {
+  display: block;
+}
+
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#side-menu ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#side-menu ul li:hover {
+  background-color: #ccc;
+}
+
+#backspace {
+    background-image: url('../icons/delete.png');
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+
+#div-historico, #div-memoria {
+    text-align: right;
+}
+
+#his {
+    border-bottom: 3px solid red;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .col {
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.dark-mode .col:hover {
+    background-color: #454545;
+}
+
+.dark-mode .col:active {
+    background-color: #5a5a5a;
+}
+
+.dark-mode .funct-1,
+.dark-mode .funct-2 {
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.dark-mode .funct-1:hover,
+.dark-mode .funct-2:hover {
+    background-color: #454545;
+}
+
+.dark-mode .funct-1:active,
+.dark-mode .funct-2:active {
+    background-color: #5a5a5a;
+}
+
+.dark-mode .numeros {
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.dark-mode .resultado,
+.dark-mode .resultado2 {
+    color: #ffffff;
+}
+
+.dark-mode #side-menu {
+    background-color: #212121;
+}
+
+.dark-mode #side-menu ul li:hover {
+    background-color: #363636;
+}
+
+.dark-mode #backspace {
+    background-image: url('../icons/delete.png');
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="contents/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="contents/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="contents/icons/calculadora.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="contents/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="col-md-1" id="modo-claro-escuro">
+        <button id="btn-toggle-dark-mode" class="btn">
+            <i class="fas fa-adjust"></i>
+            <h1>Dark</h1>
+        </button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row cabecalho">    
+
+            <div class="col-md-1" id="menu" style="width: 50px; height: 10px;"> 
+                <button id="btn-menu" class="btn">
+                    <img src="contents/icons/menu.png" alt="">
+                </button>
+            </div> 
+
+            <div class="col-md-9">
+                <h3>Científica</h3>
+            </div>
+
+            <div class="col-md-1" id="historico">
+                <h4 id="his">Histórico</h4>
+            </div>
+
+            <div class="col-md-1" id="memoria">
+                <h4 id="mem">Memória</h4>
+            </div>
+            
+            <div class="col-md-1" id="branco">
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="side-menu">
+                <button id="close-menu"><i class="fas fa-times">Fechar</i></button>
+                <ul>
+                    <li id="color-option">Mudar cor</li>
+                    <li id="converter-option">Conversor de unidade</li>
+                    <li><button id="exportar" class="btn">Exportar Resultado</button></li>
+                </ul>
+            </div>                       
+            
+            <div class="col-md-9">
+                <div class="resultado2">
+                    <p id="valor2"></p>
+                </div>
+                <div class="resultado" id="idecra">
+                    <h1 id="valor">0</h1>
+                </div>
+                <div class="row">
+                    <div class="col-1 funct-1" id="deg2">
+                        <span>DEG</span>
+                    </div>
+                    <div class="col-1 funct-1" id="hyp">
+                        <span>HYP</span>
+                    </div>
+                    <div class="col-1 funct-1" id="fe">
+                        <span>F-E</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 funct-2" id="mc">
+                        <span>MC</span>
+                    </div>
+                    <div class="col-1 funct-2" id="mr">
+                        <span>MR</span>
+                    </div>
+                    <div class="col-1 funct-2" id="mMais">
+                        <span>M+</span>
+                    </div>
+                    <div class="col-1 funct-2" id="mMenos">
+                        <span>M-</span>
+                    </div>
+                    <div class="col-1 funct-2" id="ms">
+                        <span>MS</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-1">
+                    <div class="col" id="dms">
+                        <span>dms</span>
+                    </div>
+                    <div class="col" id="2nd">
+                        <span>2<sup>nd</sup></span>
+                    </div>
+                    <div class="col" id="pi">
+                        <span>&pi;</span>
+                    </div>
+                    <div class="col" id="e">
+                        <span>e</span>
+                    </div>
+                    <div class="col" id="c">
+                        <span>C</span>
+                    </div>
+                    <div class="col" id="backspace">
+                    </div>
+                </div>
+                <div class="row linha-funcao-2">
+                    <div class="col" id="cos1">
+                        <span>cos<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="xquad">
+                        <span>x<sup>2<sup></span>
+                    </div>
+                    <div class="col" id="umsobre">
+                        <span>1/x</span>
+                    </div>
+                    <div class="col" id="absoluto">
+                        <span>|x|</span>
+                    </div>
+                    <div class="col" id="exp">
+                        <span>Exp</span>
+                    </div>
+                    <div class="col opp" id="mod" onclick="pegar('mod')">
+                        <span>Mod</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-3">
+                    <div class="col" id="sen1">
+                        <span>sin<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="raiz">
+                        <span>&radic;</span>
+                    </div>
+                    <div class="col opp" id="abreparenteses" onclick="pegar('(')">
+                        <span>(</span>
+                    </div>
+                    <div class="col opp" id="fechaparenteses" onclick="pegar(')')">
+                        <span>)</span>
+                    </div>
+                    <div class="col" id="fatorial">
+                        <span>n!</span>
+                    </div>
+                    <div class="col opp" id="dividido" onclick="pegar('/')">
+                        <span>/</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-4">
+                    <div class="col" id="tan">
+                        <span>tan</span>
+                    </div>
+                    <div class="col opp" id="elevado">
+                        <span>x<sup>y<sup></span>
+                    </div>
+                    <div class="col numeros" id="7" onclick="pegar('7')">
+                        <span>7</span>
+                    </div>
+                    <div class="col numeros" id="8" onclick="pegar('8')">
+                        <span>8</span>
+                    </div>
+                    <div class="col numeros" id="9" onclick="pegar('9')">
+                        <span>9</span>
+                    </div>
+                    <div class="col opp" id="multiplicar" onclick="pegar('x')">
+                        <span>x</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-5">
+                    <div class="col" id="tan1">
+                        <span>tan<sup>-1</sup></span>
+                    </div>
+                    <div class="col" id="dezax">
+                        <span>10<sup>x<sup></span>
+                    </div>
+                    <div class="col numeros" id="4" onclick="pegar('4')">
+                        <span>4</span>
+                    </div>
+                    <div class="col numeros" id="5" onclick="pegar('5')">
+                        <span>5</span>
+                    </div>
+                    <div class="col numeros" id="6" onclick="pegar('6')">
+                        <span>6</span>
+                    </div>
+                    <div class="col opp" id="subtrair" onclick="pegar('-')">
+                        <span>-</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-6">
+                    <div class="col" id="sen">
+                        <span>sin</span>
+                    </div>
+                    <div class="col" id="log">
+                        <span>log</span>
+                    </div>
+                    <div class="col numeros" id="1"onclick="pegar('1')">
+                        <span>1</span>
+                    </div>
+                    <div class="col numeros" id="2" onclick="pegar('2')">
+                        <span>2</span>
+                    </div>
+                    <div class="col numeros" id="3"onclick="pegar('3')">
+                        <span>3</span>
+                    </div>
+                    <div class="col opp" id="somar" onclick="pegar('+')">
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class="row linha-funcao-7">
+                    <div class="col" id="cos">
+                        <span>cos</span>
+                    </div>
+                    <div class="col" id="ln">
+                        <span>ln</span>
+                    </div>
+                    <div class="col" id="maismenos">
+                        <span>±</span>
+                    </div>
+                    <div class="col numeros" id="0" onclick="pegar('0')">
+                        <span>0</span>
+                    </div>
+                    <div class="col" id="virgula" onclick="pegar('.')">
+                        <span>,</span>
+                    </div>
+                    <div class="col" id="igual" onclick="calcular()">
+                        <span>=</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 tab">
+                <div id="div-historico">Ainda não há histórico</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="contents/js/main.js"></script>
+    <script src="contents/js/menu.js"></script>
+</body>
+
+</html>
